@@ -1,0 +1,38 @@
+Program to find the product of top two maximum elements of the array
+//package
+import java.util.*;
+class Product 
+{
+	public static void main(String[] args) 
+	{
+		//class
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter size of the array");
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		int max=Integer.MIN_VALUE;
+		int min=Integer.MIN_VALUE;
+		//read size
+		//declare array, min,max,i,j
+		
+		System.out.println("Enter array elements");
+		for(int i=0;i<n;i++){
+		    a[i]=sc.nextInt();
+		}
+		for(int i=0;i<n;i++){
+		    if(a[i]>max){
+		        max=a[i];
+		    }
+		}
+		for(int i=0;i<n;i++){
+		    if(a[i]>min && a[i]!=max){
+		        min=a[i];
+		    }
+		}
+		int prod=min*max;
+		//read array elements
+		//compute product of first 2 elements
+		//logic
+		System.out.print("Product of 2 maximum numbers is "+prod);
+	}
+}

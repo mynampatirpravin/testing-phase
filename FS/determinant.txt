@@ -1,0 +1,27 @@
+Program to find determinant of a 3*3 matrix
+//package
+import java.util.*;
+class Determinant 
+{
+	public static void main(String[] args) 
+	{
+		//class
+		Scanner sc=new Scanner(System.in);
+		int a[][]=new int[3][3];
+		//declare 3*3 array
+		System.out.println("Enter the matrix");
+		for(int i=0;i<3;i++){
+		    for(int j=0;j<3;j++){
+		        a[i][j]=sc.nextInt();
+		    }
+		}
+		//read array
+		int i=0,j=0,det=0;
+		int x=(a[i][j])*((a[i+1][j+1]*a[i+2][j+2])-(a[i+1][j+2]*a[i+2][j+1]));
+		int y=(a[i][j+1])*((a[i+1][j]*a[i+2][j+2])-(a[i+2][j]*a[i+1][j+2]));
+		int z=(a[i][j+2])*((a[i+1][j]*a[i+2][j+1])-(a[i+2][j]*a[i+1][j+1]));
+		//logic
+		det=x-y+z;
+		System.out.println("Determinat is "+det);
+	}
+}

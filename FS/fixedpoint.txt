@@ -1,0 +1,28 @@
+A FIXED POINT IN AN ARRAY IS AN ELEMENT WHOSE VALUE IS EQUAL TO ITS INDEX. 
+GIVEN AN ARRAY OF ELEMENTS, PRINT THE FIXED POINTS PRESENT IN THE ARRAY.
+// /package
+import java.util.*;
+class  FixedPoint
+{
+	public static void main(String[] args) 
+	{
+		//object
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the size of the array");
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		//delcare na and array
+		System.out.println("Enter array elements");
+		for(int i=0;i<n;i++){
+		    a[i]=sc.nextInt();
+		}
+		for(int i=0;i<n;i++){
+		    if(a[i]==i){
+		        System.out.print(i+" ");
+		    }
+		}
+		//read array
+		//logic
+		System.out.println();
+	}
+}

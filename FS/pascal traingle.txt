@@ -1,0 +1,29 @@
+Program to print pascal triangle using 2 dimensional arrays
+import java.util.*;//package
+class Pascal 
+{
+	public static void main(String[] args) 
+	{
+		//class
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter array size");
+		//declare n and array
+		int n=s.nextInt(),a[][]=new int[n][n];
+		System.out.println("Enter array elements");
+		//logic
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<=i;j++)//condition
+			{
+			    if(j==0||j==i)
+			    a[i][j]=1;
+			    else
+			    a[i][j]=a[i-1][j-1]+a[i-1][j];
+				System.out.print(" "+a[i][j]);
+			}
+			System.out.println();
+		}
+		System.out.println();
+	}
+}
+

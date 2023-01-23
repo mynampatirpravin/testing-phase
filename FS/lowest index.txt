@@ -1,0 +1,28 @@
+GIVEN A SORTED ARRAY ARR OF DISTINCT
+ INTEGERS, PRINT THE LOWEST INDEX I FOR WHICH ARR[I] == I.
+import java.util.*;
+class  LowestIndexedFixedPoint
+{
+	public static void main(String[] args) 
+	{
+        //logic	
+        Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the size of the array");
+		int n=sc.nextInt();
+		int a[]=new int[n];
+		
+		//logic
+		System.out.println("Enter array elements");
+		for(int i=0;i<n;i++){
+		    a[i]=sc.nextInt();
+		}
+		for(int i=0;i<n;i++){
+		    if(a[i]==i){
+		        System.out.print(i);
+		        break;
+		    }
+		}
+		
+		//logic
+	}
+}

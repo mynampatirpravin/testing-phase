@@ -1,0 +1,52 @@
+import java.util.*;//package
+class MatMul 
+{
+	public static void main(String[] args) 
+	{
+		//class
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter order of first matrix");
+		//logic
+		int r1=s.nextInt(),c1=s.nextInt(),a[][]=new int[r1][c1];
+		System.out.println("Enter order of second matrix");
+		//logic
+		int r2=s.nextInt(),c2=s.nextInt(),b[][]=new int[r2][c2];
+		if(c1==r2)
+		{
+			//declare arrays
+			System.out.println("Enter first matrix");
+			//reading
+			for(int i=0;i<r1;i++)
+			for(int j=0;j<c1;j++)
+			a[i][j]=s.nextInt();
+			System.out.println("Enter second matrix");
+			//reading
+			for(int i=0;i<r2;i++)
+			for(int j=0;j<c2;j++)
+			b[i][j]=s.nextInt();
+			//declare array c
+			int c[][]=new int[r1][c2];
+			//logic
+			for(int i=0;i<r1;i++)
+			for(int j=0;j<c2;j++)
+			{
+			    c[i][j]=0;
+			    for(int k=0;k<c1;k++)
+			    c[i][j]+=a[i][k]*b[k][j];
+			}
+			System.out.println("Product of the matrices is");
+			for(int i=0;i<r1;i++)
+			{
+				for(int j=0;j<c2;j++)
+				{
+					System.out.print(c[i][j]+" ");
+				}
+				System.out.println();
+			}
+		}
+		else
+		{
+			System.out.println("Multiplication not possible");
+		}
+	}
+}

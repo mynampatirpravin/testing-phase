@@ -1,0 +1,51 @@
+Program to print the largest prime factor of a given number
+//package
+import java.util.*;
+class  LargestPrimeFactor
+{
+	static boolean isPrime(int n)
+	{
+	    //logic for prime number
+	    int flag=0;
+	    for(int i=1;i<=n;i++){
+	        if(n%i==0){
+	            flag=flag+1;
+	        }
+	    }
+	    if(flag==2){
+	        return true;
+	    }
+	    else{
+	        return false;
+	    }
+	    
+	}
+	
+	static int lpf(int n)
+	{
+	    int max=Integer.MIN_VALUE;
+		//logic for largest prime factor
+		for(int i=2;i<=n;i++){
+		    if(n%i==0 && isPrime(i)){
+		        if(i>max){
+		            max=i;
+		        }
+		    }
+		}
+		return max;
+		
+		
+	}
+	public static void main(String[] args) 
+	{
+		//class
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter n value");
+		int n=sc.nextInt();
+		//declare n
+		//call function
+		int lp=lpf(n);
+	    System.out.println("Largest Prime Factor is  "+lp);
+	    //System.out.println(isPrime(n));
+	}
+}
