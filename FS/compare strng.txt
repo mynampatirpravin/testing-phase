@@ -1,0 +1,39 @@
+import java.util.*;
+class CompareStrings
+{
+    public static boolean check(String x[], String y[])
+    {
+        //create 2 strings
+        //logic
+        StringBuffer s1=new StringBuffer(),s2=new StringBuffer();
+        for(int i=0;i<x.length;i++)
+        s1.append(x[i]);
+        for(int i=0;i<y.length;i++)
+        s2.append(y[i]);
+        String t1=s1.toString(),t2=s2.toString();
+        if(t1.equals(t2))
+        return true;
+        else
+        return false;
+    }
+    public static void main(String[] args)
+    {
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the size of first string array");
+        int n1=s.nextInt();
+        String x[]=new String[n1];
+        System.out.println("Enter strings");
+        //read strings into x[]
+        for(int i=0;i<x.length;i++)
+        x[i]=s.next();
+        System.out.println("Enter the size of second string array");
+        int n2=s.nextInt();
+        String y[]=new String[n2];
+        System.out.println("Enter strings");
+        //read strings into y[]
+        for(int i=0;i<y.length;i++)
+        y[i]=s.next();
+        boolean b=check(x,y);
+        System.out.println(b);
+    }
+}

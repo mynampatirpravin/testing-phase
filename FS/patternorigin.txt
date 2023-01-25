@@ -1,0 +1,25 @@
+import java.util.*;
+class PatterninOriginal
+{
+    public static int wrdwrd(String x, String s)
+    {
+       //if s is found in x return position else return -1
+       int n=x.indexOf(s);
+       return n;
+    }
+    public static void main(String[] args)
+    {
+        Scanner ss=new Scanner(System.in);
+        System.out.println("Enter the source string");
+        //read multiword string x
+        String x=ss.nextLine();
+        System.out.println("Enter the pattern string");
+        //read multiword string s
+        String s=ss.nextLine();
+        int p=wrdwrd(x,s);
+        if(p==-1)
+            System.out.println(s+" is not present in the string "+x+" as substring");
+        else
+            System.out.println(s+" is present as substring in "+x+" from index "+p);
+    }
+}

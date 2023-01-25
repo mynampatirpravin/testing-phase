@@ -1,0 +1,32 @@
+import java.util.*;
+class BuySellStock
+{
+    public static void main(String[] args)
+    {
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter size of the array");
+        //declare n and prices array
+        int n=s.nextInt(),a[]=new int[n];
+        System.out.println("Enter price of stock on the days");
+        //read prices
+        for(int i=0;i<n;i++)
+        a[i]=s.nextInt();
+        int profit=0,startday=0,endday=0;
+        //logic
+        for(int i=0;i<n-1;i++)
+        {
+           for(int j=i+1;j<n;j++)
+           {
+               if((a[j]-a[i])>profit)
+               {
+                   profit=a[j]-a[i];
+                   startday=i;
+                   endday=j;
+               }
+           }
+        }
+        System.out.println("Maximum profit is "+profit);
+        System.out.println("Startday is "+startday);
+        System.out.println("Endday is "+endday);
+    }
+}
